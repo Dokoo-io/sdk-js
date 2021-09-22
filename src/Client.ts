@@ -1,17 +1,15 @@
-import axios from 'axios'
+import axios, {AxiosInstance} from 'axios'
+import {Feeds} from "./apis/Feeds";
 
 export interface ClientOptions {
   spaceId?: string
   token: string
 }
 
-export interface FeedOptions {
-  page?: number
-  size?: number
-}
-
 export class Client {
-  private _client
+  private readonly _client: AxiosInstance
+  public readonly feeds: Feeds
+
   constructor(
     private readonly options: ClientOptions
   ) {
@@ -22,10 +20,6 @@ export class Client {
       },
       baseURL: 'https://api.dokoo.io'
     })
-  }
-
-  async getFeed (feedId: string, feedOptions?: FeedOptions) {
-    const { data } = await this._client.post(`/feeds/${feedId}/_search`, feedOptions)
-    return data
+    this.feeds = new Feeds(this._client)
   }
 }
