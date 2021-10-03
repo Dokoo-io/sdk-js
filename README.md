@@ -8,7 +8,7 @@ yarn add @dokoo/sdk-js
 
 ## Usage
 
-```
+```javascript
 import { Client } from '@dokoo/sdk-js'
 
 const main = async () => {
