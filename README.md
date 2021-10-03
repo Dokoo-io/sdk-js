@@ -30,10 +30,12 @@ main()
 
 ### Class Client
 
-getFeed (id: string): Feed
+#### `getFeed (id: string): Feed`
 
 ### Class Feed
 
-get(): Promise<FeedResult>
-getEntity(entityId: string): Promise<FeedEntityResult>
-search(request: FeedRequest): Promise<FeedResult>
+#### `get(): Promise<FeedResult>`
+  
+#### `getEntity(entityId: string): Promise<FeedEntityResult>`
+  
+#### `search(request: FeedRequest): Promise<FeedResult>`
