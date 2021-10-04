@@ -25,21 +25,3 @@ const main = async () => {
 
 main()
 ```
-
-## API
-
-### Class Client
-
-#### `feeds: Feeds`
-
-### Class Feeds
-
-#### `getFeed (id: string): Feed`
-
-### Class Feed
-
-#### `get(): Promise<FeedResult>`
-  
-#### `getEntity(entityId: string): Promise<FeedEntityResult>`
-  
-#### `search(request: FeedRequest): Promise<FeedResult>`
