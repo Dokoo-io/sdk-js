@@ -17,7 +17,7 @@ const main = async () => {
     spaceId: 'xxx'
   })
 
-  const feed = client.getFeed('<feed-id>')
+  const feed = client.feeds.getFeed('<feed-id>')
   const { hits } = await feed.get()
   // Do something with hits
   console.log(hits)
@@ -29,6 +29,10 @@ main()
 ## API
 
 ### Class Client
+
+#### `feeds: Feeds`
+
+### Class Feeds
 
 #### `getFeed (id: string): Feed`
 
