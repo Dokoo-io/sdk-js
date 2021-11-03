@@ -1,5 +1,5 @@
 {
-  "name": "@dokoo/content-api",
+  "name": "@dokoo/sdk-js",
   "version": "0.0.11",
   "main": "dist/Client.js",
   "license": "MIT",
