@@ -13,11 +13,16 @@ export class Client {
   constructor(
     private readonly options: ClientOptions
   ) {
+    const headers = {
+      authorization: `Bearer ${options.token}`
+    }
+    if (options.spaceId) {
+      Object.assign(headers, {
+        'y-space-id': options.spaceId
+      })
+    }
     this._client = axios.create({
-      headers: {
-        'y-space-id': options.spaceId,
-        'authorization': `Bearer ${options.token}`
-      },
+      headers,
       baseURL: 'https://api.dokoo.io'
     })
     this.feeds = new Feeds(this._client)
