@@ -13,8 +13,7 @@ import { Client } from '@dokoo/sdk-js'
 
 const main = async () => {
   const client = new Client({
-    token: 'xxx',
-    spaceId: 'xxx'
+    token: 'xxx'
   })
 
   const feed = client.feeds.getFeed('<feed-id>')
