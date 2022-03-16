@@ -18,7 +18,7 @@ export class Feed {
   }
 
   async search (options: FeedSearchOptions) {
-    const { data } = await this._client.post(`/feeds/${this.feedId}/_search`)
+    const { data } = await this._client.post(`/feeds/${this.feedId}/_search`, options)
     return data
   }
 }
