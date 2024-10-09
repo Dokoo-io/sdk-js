@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: "Automated Version Bump"
-        uses: "phips28/gh-action-bump-version@e3cde4e376147b58cfa38832db31e73bb214266e"
+        uses: "phips28/gh-action-bump-version@master"
         with:
           tag-prefix: ''
         env:
