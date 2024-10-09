@@ -23,7 +23,7 @@ export class Client {
     }
     this._client = axios.create({
       headers,
-      baseURL: 'https://api.dokoo.io'
+      baseURL: 'https://yellaw-cms-132597592425.europe-west1.run.app'
     })
     this.feeds = new Feeds(this._client)
   }
